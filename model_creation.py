@@ -331,7 +331,7 @@ train, test = supervised_values[0:-2000], supervised_values[-2000:]
 # transform the scale of the data
 scaler, train_scaled, test_scaled = scale(train, test)
 
-range_size = 500
+range_size = 450
 
 X_train = train_scaled[:,0]
 Y_train = train_scaled[:,-1]
@@ -387,6 +387,6 @@ model = wider_model()
 print("train model")
 history = model.fit(X_train_complete, Y_train_complete, epochs=3, batch_size=1000, verbose=1)
 print("save model")
-model.save('SDN_model2.h5')
+model.save('SDN_model_30min.h5')
 
 
